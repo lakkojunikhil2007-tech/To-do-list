@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(180deg, #17a25f ,#9cbcd6);
+    padding: 10px;
+
+}
+.to-do_list{
+    width: 100%;
+    background: rgba(234, 221, 190, 0.9);
+    max-width: 540px;
+    margin: 40px auto 30px;
+    padding: 40px 30px 70px;
+    border-radius: 20px;
+}
+.to-do_list h2{
+    color:rgb(120, 64, 18);
+    display:flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.to-do_list h2 img{
+    width:30px;
+    margin-left: 10px;
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: azure;
+    border-radius: 30px;
+    margin-bottom: 25px;
+    border-radius: 20px;
+}
+input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+}
+button{
+    border: none;
+    outline: none;
+    padding: 16px 40px;
+    background: maroon;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 40px;
+}
+ul li{
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 15px 12px 45px;
+    border-radius: 10px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    display:flex;
+    background: #fefcf8;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+ul li::before{
+    content: '';
+    position:absolute;
+    height: 22px;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 22px;
+    border-radius: 50%;
+    background-image: url(images/check-unchecked.png);
+    background-size: cover;
+    background-position: center;
+
+ 
+}
+ul li.checked{
+    color:#555;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image: url(images/green-check-mark-circle-vector-illustration-flat-design-isolated-green-check-mark-circle-flat-design-isolated-125098940.webp);
+}
+ul li span{
+    cursor: pointer;
+    padding: 5px 10px;
+    transition: 0.3s;
+    font-size: 22px;
+    color: #555;
+    border-radius: 50%;
+}
+ul li span:hover{
+    background: #d1c277;
+    color:#000;
+
+}
